@@ -3,10 +3,13 @@
 @use './layout/header';
 @use './layout/hero';
 
-* {
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
 }
+
 
 body {
   // font-family: $mainFont;
