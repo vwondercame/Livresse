@@ -1,0 +1,29 @@
+.header {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem 3rem;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    &__title{
+      text-transform: uppercase;
+      text-shadow: 3px 3px 6px rgba(43,0,142,0.8);
+    }
+  
+    &__nav {
+      display: flex;
+      width: 30%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+  
+      &-link{
+          text-transform: uppercase;
+          text-decoration: none;
+          color: white;
+      }
+    }
+  }
+  
