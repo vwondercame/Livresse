@@ -52,8 +52,28 @@ body {
   color: white;
   font-family: "Cormorant";
   background-image: var(--bodygradient);
+  background-size: 300%;
+  -webkit-animation: bg-animation 10s infinite alternate;
+          animation: bg-animation 10s infinite alternate;
 }
 
+@-webkit-keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 .matching {
   height: 60vh;
   width: 100vw;

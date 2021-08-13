@@ -23,13 +23,14 @@ body {
     //gradient
     // background: radial-gradient(circle, rgba(70,51,210,1) 0%, rgba(255,91,162,1) 100%);
     background-image: var(--bodygradient);
-    // background-size: 400%;
+    background-size: 300%;
+    animation: bg-animation 10s infinite alternate;
   }
 
-//   @keyframes bg-animation {
-//       0% {background-position: left}
-//       100% {background-position: right} 
-//   }
+  @keyframes bg-animation{
+      0% {background-position: left;}
+      100% {background-position: right;} 
+  }
 
 .matching {
     height: 60vh;
