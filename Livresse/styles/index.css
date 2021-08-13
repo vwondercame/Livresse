@@ -10,8 +10,12 @@
   display: flex;
   justify-content: space-between;
 }
+.header__link {
+  text-decoration: none;
+}
 .header__title {
   text-transform: uppercase;
+  font-style: italic;
   font-weight: 400;
   text-shadow: 3px 3px 6px rgba(43, 0, 142, 0.8);
   color: white;
@@ -27,6 +31,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: white;
+  margin-right: 1rem;
 }
 
 .hero {
@@ -81,4 +86,11 @@ body {
   color: white;
   background: #ff5ba2;
   background: radial-gradient(circle, #ff5ba2 0%, #6152d1 100%);
+}
+
+#movie__genre {
+  position: relative;
+  left: 50%;
+  width: 40%;
+  height: 2rem;
 }/*# sourceMappingURL=index.css.map */

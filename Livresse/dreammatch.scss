@@ -25,25 +25,42 @@ body {
     justify-content: space-between;
 }
 
-.movie {
+
+.matching-box {
     width: 45%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
 
-    &__container {
+.details {
     width: 10rem;
-    height: 10rem;
+    height: 14rem;
     border: 1px solid white;
     box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
-    }
+    border-radius: 0.3rem;
+}
 
-    &__poster {
+.poster {
     width: 12rem;
     height: 22rem;
     border: 1px solid white;
     border-radius: 0.3rem;
     box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
+}
+
+.movie {
+    &__details {
+    margin-left: 3rem;
     }
+}
+
+.title {
+    text-align: center;
+    font-family: $fontCormorant;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .buttons {
@@ -52,23 +69,18 @@ body {
     justify-content: space-around;
 }
 
-.cocktail {
-    width: 45%;
-    display: flex;
-    justify-content: space-around;
+.button {
+    height: 1rem;
+    width: 1rem;
 
-&__container {
-    width: 10rem;
-    height: 10rem;
-    border: 1px solid white;
-    box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
-}
-
-&__poster {
-    width: 12rem;
-    height: 22rem;
-    border: 1px solid white;
-    border-radius: 0.3rem;
-    box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
+    &__container {
+        width: 1rem;
     }
 }
+
+.cocktail {
+&__details {
+    margin-right: 3rem;
+    }
+}
+

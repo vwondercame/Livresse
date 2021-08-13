@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="../dreammatch.css">
 </head>
 <body>
-    <header class="header"> 
-        <h1 class="header__title">L'Ivresse</h1>
+    <header class="header">
+        <a class='header__link' href="../index.html">
+            <h1 class="header__title">L'Ivresse</h1>
+        </a> 
+        
 
         <nav class="header__nav">
             <a class="header__nav-link" href="./pages/matching.html">Matching</a>
@@ -21,39 +24,40 @@
     <main class="main">
         <section class="matching">
             <section class="movie matching-box">
-                <div class="movie__container">
-                    <h2 class="movie__title"> Movie Name</h2>
-                    <p class="movie__description"></p>
+                <div class="movie__details details">
+                    <h2 class="movie__title title"> Movie Name</h2>
+                    <p class="movie__description description"></p>
                 </div>
 
-                <div class="movie__poster">
+                <div class="movie__poster poster">
                     <img src="#" alt="" class="movie__poster-image">
                 </div>
             </section>
 
             <div class="buttons">
-                <div class="button1">
-                    Shuffle
+                <div class="button__container">
+                    <img class="button button1" src="../assets/reload2.png" alt="">
                 </div>
 
-                <div class="button2">
-                    Shuffle
+                <div class="button__container">
+                    <img class="button button2" src="../assets/reload1.png" alt="">
                 </div>
             </div>
 
             <section class="cocktail matching-box">
-                <div class="cocktail__poster">
+                <div class="cocktail__poster poster">
                     <img src="#" alt="" class="cocktail__poster-image">
                 </div>
                 
-                <div class="cocktail__container">
-                    <h2 class="cocktail__title"> cocktail Name</h2>
-                    <p class="cocktail__description"></p>
+                <div class="cocktail__details details">
+                    <h2 class="cocktail__title title"> cocktail Name</h2>
+                    <p class="cocktail__description description"></p>
                 </div>
         </section>
     </section>
 
     </main>
-    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/matching.js"></script>    
 </body>
 </html>
