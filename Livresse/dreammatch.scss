@@ -74,22 +74,31 @@ body {
     justify-content: space-around;
 }
 
+
 .button {
-    padding: 2.5rem 0.8rem;
-    // border: 0.1em solid #FFFFFF;
-    border-radius: 0.12em;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
     color: #FFFFFF;
-     transition: all 0.2s;
 
+    &:hover{
+        color: rgb(45, 6, 63)
+    }
 
-    // &__container {
-    //     width: 1rem;
-    // }
+    &__container{
+        padding: 0.8rem;
+        border: 1px solid #FFFFFF;
+        border-radius: 0.12em;
+        transition: all 0.2s;
+
+        &:hover{
+        color:#000000;
+        background-color:#FFFFFF;
+        }
+    }
 }
+
 
 .cocktail {
 &__details {
