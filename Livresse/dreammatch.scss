@@ -19,7 +19,7 @@ body {
 
 .matching {
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,13 +27,19 @@ body {
 
 .movie {
     width: 45%;
-    // &__description {
-    //     // height: 10rem;
-    //     // border: 1px solid white;
-    // }
+    display: flex;
+    justify-content: space-around;
+
+    &__container {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid white;
+    box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
+    }
 
     &__poster {
     width: 12rem;
+    height: 22rem;
     border: 1px solid white;
     border-radius: 0.3rem;
     box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
@@ -41,18 +47,26 @@ body {
 }
 
 .buttons {
-width: 10%;
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .cocktail {
-width: 45%;
-    // &__description {
-    //     height: 10rem;
-    //     border: 1px solid white;
-    // }
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
 
-    &__poster {
+&__container {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid white;
+    box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
+}
+
+&__poster {
     width: 12rem;
+    height: 22rem;
     border: 1px solid white;
     border-radius: 0.3rem;
     box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
