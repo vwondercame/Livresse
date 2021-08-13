@@ -18,11 +18,12 @@ body {
   }
 
 .matching {
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 3rem;
 }
 
 
@@ -74,12 +75,20 @@ body {
 }
 
 .button {
-    height: 1rem;
-    width: 1rem;
+    padding: 2.5rem 0.8rem;
+    // border: 0.1em solid #FFFFFF;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+     transition: all 0.2s;
 
-    &__container {
-        width: 1rem;
-    }
+
+    // &__container {
+    //     width: 1rem;
+    // }
 }
 
 .cocktail {

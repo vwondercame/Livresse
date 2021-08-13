@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Ivresse</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./dreammatch.css">
 </head>
 <body>
     <header class="header"> 
@@ -35,17 +36,50 @@
                    <!-- <input type ='submit' value = 'submit'> -->
                     <!-- <input class="hero__genre-input" type="text" id="input" name="genreInput" placeholder="Pick a genre"/> -->
                 </form>
-                
-                 
-                <!-- <div class="hero__dropdown-content">
-                    <p>drama</p>
-                    <p>romance</p>
-                    <p>action</p>
-                    <p>horror</p>
-                </div> -->
             </div>
         </div>
     </section>
+
+    <main class="main">
+        <section class="matching">
+            <section class="movie matching-box">
+                <div class="movie__details details">
+                    <h2 class="movie__title title"> Movie Name</h2>
+                    <p class="movie__description description"></p>
+                </div>
+
+                <div class="movie__poster poster">
+                    <div class="overlay"></div>
+                    <img src="#" alt="" class="movie__poster-image">
+                </div>
+            </section>
+
+            <div class="buttons">
+                <div class="button__container">
+                    <button class="button button1">
+                        SHUFFLE
+                    </button>
+                </div>
+
+                <div class="button__container">
+                    <button class="button button2">
+                        SHUFFLE
+                    </button>
+                </div>
+            </div>
+
+            <section class="cocktail matching-box">
+                <div class="cocktail__poster poster">
+                    <div class="overlay"></div>
+                    <img src="#" alt="" class="cocktail__poster-image">
+                </div>
+                
+                <div class="cocktail__details details">
+                    <h2 class="cocktail__title title"> cocktail Name</h2>
+                    <p class="cocktail__description description"></p>
+                </div>
+        </section>
+        </section>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./scripts/index.js"></script>
