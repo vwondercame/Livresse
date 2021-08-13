@@ -1,55 +1,36 @@
 const genreApi = '?api_key=47359816eaddb6638823a824dbadf6e0'; 
 const movieGenreSelect = document.getElementById('movie__genre');
 const dropMenuTitle = document.createElement('option');
+const selectElement = document.getElementById('movie__genre');
+const genreIDNumberInOrder = [28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 10770, 53, 10752, 37]
 let result = [];
-// genre ID
-    // 28 = action
-    // 12 = adventure
-    // 16 = animation
-    // 35 = comedy
-    // 80 = crime
-    // 99 = documentary
-    // 18 = drama
-    // 10751 = family
-    // 14 = fantasy
-    // 36 = history
-    // 27 = horror
-    // 10402 = music
-    // 9648 = mystery
-    // 10749 = romance
-    // 878 = sci-fi
-    // 10770 = tv movie
-    // 53 = thriller
-    // 10752 = war
-    // 37 = western
-// image
-// http://image.tmdb.org/t/p/
-// postersize: "w92", "w154", "w185", "w342", "w500", "w780", "original"
+let selectedGenreID = 0; 
+
+// displaying drop down box options
 dropMenuTitle.setAttribute('value','genre');
 movieGenreSelect.appendChild(dropMenuTitle)
-
 dropMenuTitle.innerHTML = "Pick a genre";
-
 const genreList = ['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Sci-Fi", "TV Movie", "Thriller", "War", "Western"]
-
 for(let i = 0; i < genreList.length; i++){
+    const option = document.createElement('option');
+    option.setAttribute('value','genre');
+    option.value = String(i + 1);
+    movieGenreSelect.appendChild(option);
+    option.innerHTML = genreList[i];
+}
 
-            const option = document.createElement('option');
-            option.setAttribute('value','genre');
-            movieGenreSelect.appendChild(option);
-    
-            option.innerHTML = genreList[i];
-        }
+// listening to dropdown options. turn that value into genre ID and putting that ID number into selectedGenreID variable
+selectElement.addEventListener('change', function(){
+    selectedGenreID = genreIDNumberInOrder[selectElement.selectedIndex]
+});
 
-// const selectedGenre = //value
-let genreNumber = 53//selectedGenre
-// let pageNumber = 2
+// initializing axios.get
 gettingMovieData();
 gettingCocktailData();
 
+
 function gettingMovieData(){
-    
-    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=47359816eaddb6638823a824dbadf6e0&with_genres=${genreNumber}`)
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=47359816eaddb6638823a824dbadf6e0&with_genres=${selectedGenreID}`)
     .then(response => {
     // let results = response.data.results
     console.log(response);
@@ -63,10 +44,7 @@ function gettingMovieData(){
     }
     let randomNumber = Math.floor(Math.random()*10);
     displayMovie(result[randomNumber]);
-})
-}
-// let randomNumber = Math.floor(Math.random()*10);
-// displayMovie(selectedGenre[randomNumber])
+})}
 
 function gettingCocktailData(){
     axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
@@ -95,8 +73,3 @@ function displayCocktail(){
 //     displayCocktail(selectedGenre[randomNumber])
 // });
 
-
-// axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php%27')
-// .then(response => {
-//     console.log(response);
-// })     

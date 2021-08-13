@@ -40,12 +40,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bodygradient: radial-gradient(
+      circle,
+       rgba(70,51,210,1) 0%,
+       rgba(255,91,162,1) 100%);
+}
+
 body {
   margin: 0;
   color: white;
   font-family: "Cormorant";
-  background: #4633d2;
-  background: radial-gradient(circle, #4633d2 0%, #ff5ba2 100%);
+  background-image: var(--bodygradient);
 }
 
 .matching {
@@ -102,25 +108,41 @@ body {
   justify-content: space-around;
 }
 
+:root {
+  --gradient: linear-gradient(
+      90deg,
+      #ffcbdf,
+      rgb(167, 247, 213),
+      rgb(11, 255, 89),
+      rgb(91, 0, 91),
+      rgb(255, 0, 255));
+}
+
 .button {
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #FFFFFF;
-}
-.button:hover {
   color: #2d063f;
 }
+.button:hover {
+  color: #FFFFFF;
+}
 .button__container {
+  cursor: pointer;
   padding: 0.8rem;
   border: 1px solid #FFFFFF;
   border-radius: 0.12em;
   transition: all 0.2s;
+  background-image: var(--gradient);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
 }
-.button__container:hover {
+.button__container:hover, .button__container:focus {
   color: #000000;
   background-color: #FFFFFF;
+  background-position: right;
 }
 
 .cocktail__details {

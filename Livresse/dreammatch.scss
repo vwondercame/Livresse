@@ -8,14 +8,28 @@
   box-sizing: border-box;
 }
 
+:root {
+    --bodygradient: radial-gradient(
+        circle,
+         rgba(70,51,210,1) 0%, 
+         rgba(255,91,162,1) 100%);
+  }
+
+
 body {
     margin: 0;
     color: white;
     font-family: $fontCormorant;
     //gradient
-    background: rgb(70,51,210);
-    background: radial-gradient(circle, rgba(70,51,210,1) 0%, rgba(255,91,162,1) 100%);
+    // background: radial-gradient(circle, rgba(70,51,210,1) 0%, rgba(255,91,162,1) 100%);
+    background-image: var(--bodygradient);
+    // background-size: 400%;
   }
+
+//   @keyframes bg-animation {
+//       0% {background-position: left}
+//       100% {background-position: right} 
+//   }
 
 .matching {
     height: 60vh;
@@ -74,27 +88,42 @@ body {
     justify-content: space-around;
 }
 
+:root {
+    --gradient: linear-gradient(
+        90deg, 
+        #ffcbdf,
+        rgb(167, 247, 213),
+        rgb(11, 255, 89), 
+        rgb(91, 0, 91),
+        rgb(255, 0, 255));
+  }
 
 .button {
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
-    color: #FFFFFF;
+    color: rgb(45, 6, 63);
 
     &:hover{
-        color: rgb(45, 6, 63)
+        color: #FFFFFF;
     }
 
     &__container{
+        cursor: pointer;
         padding: 0.8rem;
         border: 1px solid #FFFFFF;
         border-radius: 0.12em;
         transition: all 0.2s;
+        background-image: var(--gradient);
+        background-size: 300%;
+        background-position: left; 
+        transition: background-position 1s;
 
-        &:hover{
+        &:hover, &:focus{
         color:#000000;
         background-color:#FFFFFF;
+        background-position: right; 
         }
     }
 }
