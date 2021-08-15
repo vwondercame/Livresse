@@ -21,7 +21,6 @@ body {
     color: white;
     font-family: $fontCormorant;
     //gradient
-    // background: radial-gradient(circle, rgba(70,51,210,1) 0%, rgba(255,91,162,1) 100%);
     background-image: var(--bodygradient);
     background-size: 300%;
     animation: bg-animation 10s infinite alternate;
@@ -38,7 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 3rem;
+    margin-bottom: 10rem;
 }
 
 
@@ -50,8 +49,9 @@ body {
 }
 
 .details {
-    width: 10rem;
-    height: 14rem;
+    width: 12rem;
+    height: fit-content;
+    padding: 1rem;
     border: 1px solid white;
     box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
     border-radius: 0.3rem;
@@ -63,6 +63,20 @@ body {
     border: 1px solid white;
     border-radius: 0.3rem;
     box-shadow: 0px 4px 4px 4px rgb(0 0 0 / 20%);
+}
+
+.movie__poster-image{
+    width: 12rem;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+.cocktail__poster-image{
+    width: 12rem;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 0.3rem;
 }
 
 .overlay {
@@ -78,10 +92,16 @@ body {
 .title {
     text-align: center;
     font-family: $fontCormorant;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 1rem;
     text-transform: uppercase;
+    padding-bottom: 0.5rem;
 }
+
+.description {
+    font-size: 1rem;
+}
+
 
 .buttons {
     width: 10%;
